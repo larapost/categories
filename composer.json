@@ -1,0 +1,27 @@
+{
+	"name": "larapost/categories",
+	"type": "library",
+	"description": "Content categories system",
+	"keywords": ["php", "laravel", "categories", "komicho"],
+	"homepage": "https://github.com/komichoLab/laravelWebToken",
+	"authors": [
+		{
+			"name": "komicho",
+			"email": "komicho1996@gmail.com",
+			"homepage": "https://github.com/komicho",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Larapost\\": "/src"
+		}
+	},
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Larapost\\Categorie\\Support\\ServiceProvider"
+            ]
+        }
+    }
+}
