@@ -77,9 +77,9 @@ class Categories
         ]);
     }
 
-    public function subGet($categorie_id, $id, $value)
+    public function subGet($id, $value)
     {
-        $cat = SubCategorie::where('categorie_id', $categorie_id)->where($id, $value)->first();
+        $cat = SubCategorie::where($id, $value)->first();
         return $cat;
     }
 
