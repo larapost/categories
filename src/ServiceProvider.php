@@ -11,8 +11,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/migrations' => 'database/migrations/',
-        ]);
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
 }

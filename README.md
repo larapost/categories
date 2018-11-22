@@ -14,18 +14,11 @@ $ composer require larapost/categories
     Larapost\Categorie\Support\ServiceProvider::class,
 ],
 ```
-
-### publish 
-```
-$ php artisan vendor:publish
-```
-OR
-```
-$ php artisan vendor:publish --provider="Larapost\Categorie\Support\ServiceProvider"
-```
 ### Migrate
 you can use migrate
 ```
+$ php artisan migrate
+OR
 $ php artisan migrate:fresh
 ```
 
