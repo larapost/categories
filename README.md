@@ -1,4 +1,4 @@
-# laravelWebToken
+# LaraPost Categories
 
 ### Install via composer
 Add orm to composer.json configuration file.
@@ -8,6 +8,7 @@ $ composer require larapost/categories
 ```
 
 ### add to file config/app.php
+If you are using laravel version before 5.5 you must add our service provider.
 ```php
 'providers' => [
     ...
