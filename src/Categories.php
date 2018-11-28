@@ -27,9 +27,9 @@ class Categories
 
     public function update($id, $name, $slug = false)
     {
-        $catWhere = Categorie::where('id', $id);
+        $whereCat = Categorie::where('id', $id);
 
-        if (!$cat->exists()) {
+        if (!$whereCat->exists()) {
             return 'Category not found';
         }
 
@@ -37,7 +37,7 @@ class Categories
             $slug = str_slug($name);
         }
 
-        $catWhere->update([
+        $whereCat->update([
             'name' => $name,
             'slug' => $slug
         ]);
