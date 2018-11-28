@@ -25,6 +25,25 @@ class Categories
         ]);
     }
 
+    public function update($id, $name, $slug = false)
+    {
+        $catWhere = Categorie::where('id', $id);
+
+        if (!$cat->exists()) {
+            return 'Category not found';
+        }
+
+        if (!$slug) {
+            $slug = str_slug($name);
+        }
+
+        $catWhere->update([
+            'name' => $name,
+            'slug' => $slug
+        ]);
+        return 'Updated';
+    }
+
     public function get($id, $value, $subs = false)
     {
         $query = Categorie::query();
@@ -75,6 +94,25 @@ class Categories
             'name' => $name,
             'slug' => $slug
         ]);
+    }
+
+    public function subUpdate($id, $name, $slug = false)
+    {
+        $whereSubCat = SubCategorie::where('id', $id);
+
+        if (!$whereSubCat->exists()) {
+            return 'Sub category not found';
+        }
+
+        if (!$slug) {
+            $slug = str_slug($name);
+        }
+
+        $whereSubCat->update([
+            'name' => $name,
+            'slug' => $slug
+        ]);
+        return 'Updated';
     }
 
     public function subGet($id, $value)

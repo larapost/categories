@@ -37,6 +37,14 @@ function(Categories $categories)
 }
 ```
 
+### Update
+```php
+function(Categories $categories)
+{
+    return $categories->update('<id>', '<name>', '<slug>' = false);
+}
+```
+
 ### Get
 ```php
 function(Categories $categories)
@@ -68,6 +76,14 @@ function(Categories $categories)
 function(Categories $categories)
 {
     return $categories->subAdd('<categorie_id>', '<name>', '<slug>' = false);
+}
+```
+
+### Sub Update
+```php
+function(Categories $categories)
+{
+    return $categories->subUpdate('<id>', '<name>', '<slug>' = false);
 }
 ```
 
