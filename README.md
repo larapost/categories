@@ -102,3 +102,11 @@ function(Categories $categories)
     return $categories->subRemove('<id>');
 }
 ```
+
+### sub All
+```php
+function(Categories $categories)
+{
+    return $categories->subAll();
+}
+```

@@ -2,8 +2,7 @@
 
 namespace Larapost;
 
-use Larapost\Models\Categorie;
-use Larapost\Models\SubCategorie;
+use Larapost\Models\{Categorie, SubCategorie};
 
 class Categories
 {
@@ -126,4 +125,8 @@ class Categories
         return SubCategorie::where('id', $id)->delete();
     }
 
+    public function subAll()
+    {
+        return SubCategorie::get();
+    }
 }
