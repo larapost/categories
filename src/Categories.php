@@ -40,7 +40,7 @@ class Categories
             'name' => $name,
             'slug' => $slug
         ]);
-        return 'Updated';
+        return $whereCat->first();
     }
 
     public function get($id, $value, $subs = false)
